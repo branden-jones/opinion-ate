@@ -3,10 +3,10 @@ on: [push]
 jobs:
   test:
     name: Test
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Install Dependencies
-        uses: actions/checkout@v3
+        uses: actions/checkout@3
         run: npm ci
       - name: Unit Tests
         run: npm run test -- --watch
